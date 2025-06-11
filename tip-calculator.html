@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <h1>Tip Calculator</h1>
+    </header>
+
+    <main>
+        <!-- Question cards container -->
+        <div id="question-container" class="question-card fade-in" role="form" aria-live="polite">
+            <label id="question-label" for="answer-input"></label>
+            <input
+            type="number"
+            id="answer-input"
+            aria-describedby="error-message"
+            autocomplete="off"
+            />
+            <div id="error-message" class="error-message" role="alert" aria-live="assertive"></div>
+            <button id="next-button" aria-label="Next question">Next</button>
+        </div>
+
+
+        <!-- Result card hidden initially -->
+        <div id="result-container" class="result-card" style="display:none;" aria-live="polite" role="region" aria-label="Tip calculation results">
+            <h2>Tip Calculation Summary</h2>
+            <div class="result-section">
+                <div class="result-row">
+                <span class="result-label">Number of Lunch Servers:</span>
+                <span id="res-lunchServers"></span>
+            </div>
+            <div class="result-row">
+                <span class="result-label">Number of Dinner Servers:</span>
+                <span id="res-dinnerServers"></span>
+            </div>
+            <div class="result-row">
+                <span class="result-label">Total Lunch Tips:</span>
+                <span id="res-lunchTipsTotal"></span>
+            </div>
+            <div class="result-row">
+                <span class="result-label">Tips at Close of Day:</span>
+                <span id="res-closeOfDayTips"></span>
+            </div>
+            <div class="result-row">
+                <span class="result-label">Total Dinner Tips:</span>
+                <span id="res-dinnerTips"></span>
+            </div>
+            <div class="result-row">
+                <span class="result-label">Tip per Lunch Server:</span>
+                <span id="res-tipPerLunchServer"></span>
+            </div>
+            <div class="result-row">
+                <span class="result-label">Tip per Dinner Server:</span>
+                <span id="res-tipPerDinnerServer"></span>
+            </div>
+            </div>
+            <button id="restart-button" class="restart-button">Start Over</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
