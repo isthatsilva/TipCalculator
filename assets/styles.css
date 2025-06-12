@@ -1,10 +1,10 @@
 :root {
-    --font-family: 'Inter', sans-serif;
+    /*--font-family: 'Inter', sans-serif;
     --color-text: #4b5563;
     --color-background: #ffffff;
     --color-primary: #111827;
     --color-card-bg: #f9fafb;
-    --color-card-shadow: rgba(0, 0, 0, 0.05);
+    --color-card-shadow: rgba(0, 0, 0, 0.05);*/
     --spacing-sm: 8px;
     --spacing-md: 16px;
     --spacing-lg: 32px;
@@ -17,19 +17,29 @@
   }
   
   body {
-    margin: 0;
-    font-family: var(--font-family);
-    background-color: var(--color-background);
-    color: var(--color-text);
-    line-height: 1.5;
+    background: linear-gradient(45deg, rgb(167, 180, 8), rgb(167, 98, 5), rgb(167, 10, 42), rgb(71, 3, 4));
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    display:flex;
-    flex-direction: column;
-    min-height: 100vh;
-    padding: var(--spacing-lg);
   }
   
+  @keyframes color{
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0 50%;
+    }
+  }
+
   header {
     position: sticky;
     top: 0;
@@ -115,7 +125,7 @@
     padding: var(--spacing-md);
     font-size: 1.25rem;
     font-weight: 700;
-    background-color: var(--color-primary);
+    background-color: rgb(37, 99, 235);
     color: white;
     border: none;
     border-radius: var(--border-radius);
@@ -156,7 +166,7 @@
   }
   
   .result-label {
-    color: #374151;
+    color: #fafafb;
   }
   
   .restart-button {
